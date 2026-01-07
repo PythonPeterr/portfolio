@@ -100,8 +100,10 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
-      {/* Remove RevealFx from first project to improve LCP */}
-      <Projects range={[1, 1]} />
+      {/* Add spacing so first project only appears after scrolling */}
+      <Column fillWidth paddingTop="xl" style={{ minHeight: "60vh" }}>
+        <Projects range={[1, 1]} />
+      </Column>
       {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
           <Row fillWidth paddingRight="64">

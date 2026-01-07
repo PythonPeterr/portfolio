@@ -34,7 +34,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   // Optimize images array to use correct format
   const optimizedImages = images.map(img => {
     // Convert .png to .webp if webp version exists (for optimized projects)
-    if ((img.includes('giroscope') || img.includes('meijer-knijnenberg') || img.includes('n8n-crm-automation')) && img.endsWith('.png')) {
+    // For giroscope, use cover.webp if it exists, otherwise keep original
+    if (img.includes('giroscope') && img.endsWith('.png')) {
+      // Check if cover.webp exists by trying the replacement
+      return img.replace('giroscope.png', 'cover.webp').replace('.png', '.webp');
+    }
+    if ((img.includes('meijer-knijnenberg') || img.includes('n8n-crm-automation')) && img.endsWith('.png')) {
       return img.replace('.png', '.webp');
     }
     return img;
