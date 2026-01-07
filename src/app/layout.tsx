@@ -45,6 +45,11 @@ export default async function RootLayout({
       )}
     >
       <head>
+        {/* Resource hints for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://www.google.com" />
+        <link rel="dns-prefetch" href="https://www.linkedin.com" />
+
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{

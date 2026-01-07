@@ -9,6 +9,8 @@ import {
   SmartLink,
   Text,
 } from "@once-ui-system/core";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 interface ProjectCardProps {
   href: string;
@@ -23,6 +25,7 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
+  priority = false,
   images = [],
   title,
   content,
@@ -30,15 +33,56 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   avatars,
   link,
 }) => {
+  const [shouldLoadCarousel, setShouldLoadCarousel] = useState(priority);
+
+  useEffect(() => {
+    // For non-priority cards, defer carousel loading
+    if (!priority) {
+      const timer = setTimeout(() => {
+        setShouldLoadCarousel(true);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [priority]);
+
+  // Optimize images array to use correct format
+  const optimizedImages = images.map(img => {
+    // Convert .png to .webp if webp version exists
+    if (img.includes('giroscope') && img.endsWith('.png')) {
+      return img.replace('.png', '.webp');
+    }
+    return img;
+  });
+
   return (
     <Column fillWidth gap="m">
-      <Carousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
-          alt: title,
-        }))}
-      />
+      {shouldLoadCarousel ? (
+        <Carousel
+          sizes="(max-width: 960px) 100vw, 960px"
+          items={optimizedImages.map((image, index) => ({
+            slide: image,
+            alt: title,
+            priority: priority && index === 0, // Only prioritize first image of priority card
+          }))}
+        />
+      ) : (
+        <div style={{
+          position: 'relative',
+          width: '100%',
+          aspectRatio: '16/9',
+          backgroundColor: '#f0f0f0',
+          borderRadius: '12px'
+        }}>
+          <Image
+            src={optimizedImages[0] || '/images/placeholder.jpg'}
+            alt={title}
+            fill
+            style={{ objectFit: 'cover', borderRadius: '12px' }}
+            sizes="(max-width: 960px) 100vw, 960px"
+            priority={priority}
+          />
+        </div>
+      )}
       <Flex
         s={{ direction: "column" }}
         fillWidth

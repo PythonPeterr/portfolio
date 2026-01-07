@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Jesse",
   lastName: "Verbeek",
   name: `Jesse Verbeek`,
-  role: "Founder & Full-Stack Developer | Ex-Optiver, Ex-Tesla",
+  role: "Founder, Data, AI & Automation Enthusiast",
   avatar: "/images/avatar.jpg",
   email: "jeverbeek6@gmail.com",
   location: "Europe/Amsterdam", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -85,10 +85,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Jesse is an Amsterdam-based founder and full-stack developer who was selected for Antler ONE (120 founders from 7,500+ applicants).
-        With a background in econometrics from VU Amsterdam and experience at Optiver and Tesla, he specializes in building AI-powered
-        SaaS applications and automation solutions. Jesse founded Giroscope, a portfolio analysis tool that scaled to 500+ users,
-        and builds automation workflows that help businesses streamline their CRM and operational processes.
+        I'm an Amsterdam-based founder and full-stack developer selected for Antler ONE (120 founders from 7,500+ applicants).
+        With a background in econometrics from VU Amsterdam and experience at Optiver and Tesla, I specialize in building AI-powered
+        SaaS applications and automation solutions. I founded Giroscope, a portfolio analysis tool that scaled to 500+ users,
+        and build automation workflows that help businesses streamline their CRM and operational processes.
       </>
     ),
   },
