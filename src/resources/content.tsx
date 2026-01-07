@@ -9,7 +9,7 @@ const person: Person = {
   avatar: "/images/avatar.jpg",
   email: "jeverbeek6@gmail.com",
   location: "Europe/Amsterdam", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["Dutch", "English"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English Native", "Netherlands Mothertongue", "German B1 level"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -53,19 +53,19 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Giroscope</strong>{" "}
+        <strong className="ml-4">Ask For Sara</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/giroscope",
+    href: "/work/ask-for-sara",
   },
   subline: (
     <>
-    I'm Jesse, a founder and full-stack developer selected for <Text as="span" size="xl" weight="strong">Antler ONE</Text>. <br />
-    Ex-Optiver, Ex-Tesla. Building SaaS products and automation solutions that scale.
+    I'm Jesse, a founder, full-stack developer and data & automation enthusiast. <br />
+    Have worked at Optiver, Tesla and built my own startup. I love building SaaS products and automation solutions that scale and positively impact peoples' day-to-day life.
 </>
   ),
 };
@@ -91,10 +91,8 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I'm an Amsterdam-based founder and full-stack developer selected for Antler ONE (120 founders from 7,500+ applicants).
-        With a background in econometrics from VU Amsterdam and experience at Optiver and Tesla, I specialize in building AI-powered
-        SaaS applications and automation solutions. I founded Giroscope, a portfolio analysis tool that scaled to 500+ users,
-        and build automation workflows that help businesses streamline their CRM and operational processes.
+        I'm Jesse, a founder, full-stack developer and data & automation enthusiast. Have worked in the past at
+        Optiver, Tesla and built my own startup. I love building SaaS products and automation solutions that scale and positively impact peoples' day-to-day life.
       </>
     ),
   },
