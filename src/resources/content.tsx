@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Jesse",
   lastName: "Verbeek",
   name: `Jesse Verbeek`,
-  role: "Automation Engineer",
+  role: "Automation Engineer & SaaS Developer",
   avatar: "/images/avatar.jpg",
   email: "jeverbeek6@gmail.com",
   location: "Europe/Amsterdam", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -58,7 +58,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Jesse, an automation engineer specializing in <Text as="span" size="xl" weight="strong">n8n workflows</Text>, where I build intelligent <br /> automation solutions. I transform manual processes into seamless automated systems.
+    I'm Jesse, an automation engineer and SaaS developer specializing in <Text as="span" size="xl" weight="strong">n8n workflows</Text> and <Text as="span" size="xl" weight="strong">AI-powered applications</Text>. <br /> I design and build intelligent automation solutions and SaaS products that transform manual processes into seamless systems.
 </>
   ),
 };
@@ -84,9 +84,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Jesse is an Amsterdam-based automation engineer with a passion for transforming manual workflows
+        Jesse is an Amsterdam-based automation engineer and SaaS developer with a passion for transforming manual workflows
         into intelligent automated systems. His work spans n8n workflow automation, CRM integration,
-        and AI-powered business process optimization.
+        and AI-powered business process optimization. He designs and builds full-stack SaaS applications,
+        including voice agents like Ask For Sara, which helps businesses automate their HubSpot CRM administration through natural conversation.
       </>
     ),
   },
@@ -97,11 +98,15 @@ const about: About = {
       {
         company: "Meijer & Knijnenberg",
         timeframe: "2023 - Present",
-        role: "Automation Engineer",
+        role: "Automation Engineer & SaaS Developer",
         achievements: [
           <>
             Built comprehensive n8n automation workflows for CRM, ATS, and business processes,
             reducing manual work by 70%.
+          </>,
+          <>
+            Designed and developed Ask For Sara, an AI-powered voice agent SaaS application that handles
+            HubSpot CRM administration through natural language conversations, automating data entry and CRM management.
           </>,
           <>
             Implemented AI-powered automation solutions that streamlined client communication and
@@ -113,8 +118,12 @@ const about: About = {
       {
         company: "Freelance",
         timeframe: "2020 - Present",
-        role: "Workflow Automation Specialist",
+        role: "Workflow Automation Specialist & SaaS Developer",
         achievements: [
+          <>
+            Designed and built full-stack SaaS applications, including AI-powered voice agents and
+            automation platforms for business process optimization.
+          </>,
           <>
             Developed custom automation solutions for various clients using n8n, reducing
             operational overhead and improving efficiency.
@@ -175,6 +184,31 @@ const about: About = {
           },
           {
             name: "Integration",
+            icon: "globe",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "SaaS Application Development",
+        description: (
+          <>Full-stack development of SaaS applications, including Ask For Sara - an AI-powered voice agent that automates HubSpot CRM administration through natural conversation. Expertise in building scalable, user-friendly applications from concept to deployment.</>
+        ),
+        tags: [
+          {
+            name: "React",
+            icon: "github",
+          },
+          {
+            name: "Node.js",
+            icon: "github",
+          },
+          {
+            name: "AI/Voice",
+            icon: "globe",
+          },
+          {
+            name: "Full-Stack",
             icon: "globe",
           },
         ],
