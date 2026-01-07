@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Jesse",
   lastName: "Verbeek",
   name: `Jesse Verbeek`,
-  role: "Automation Engineer & SaaS Developer",
+  role: "Founder & Full-Stack Developer | Ex-Optiver, Ex-Tesla",
   avatar: "/images/avatar.jpg",
   email: "jeverbeek6@gmail.com",
   location: "Europe/Amsterdam", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -42,23 +42,24 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Automating workflows with n8n and AI</>,
+  headline: <>Building AI-powered SaaS applications</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Meijer & Knijnenberg</strong>{" "}
+        <strong className="ml-4">Giroscope</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/meijer-knijnenberg",
+    href: "/work/giroscope",
   },
   subline: (
     <>
-    I'm Jesse, an automation engineer and SaaS developer specializing in <Text as="span" size="xl" weight="strong">n8n workflows</Text> and <Text as="span" size="xl" weight="strong">AI-powered applications</Text>. <br /> I design and build intelligent automation solutions and SaaS products that transform manual processes into seamless systems.
+    I'm Jesse, a founder and full-stack developer selected for <Text as="span" size="xl" weight="strong">Antler ONE</Text>. <br />
+    Ex-Optiver, Ex-Tesla. Building SaaS products and automation solutions that scale.
 </>
   ),
 };
@@ -84,10 +85,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Jesse is an Amsterdam-based automation engineer and SaaS developer with a passion for transforming manual workflows
-        into intelligent automated systems. His work spans n8n workflow automation, CRM integration,
-        and AI-powered business process optimization. He designs and builds full-stack SaaS applications,
-        including voice agents like Ask For Sara, which helps businesses automate their HubSpot CRM administration through natural conversation.
+        Jesse is an Amsterdam-based founder and full-stack developer who was selected for Antler ONE (120 founders from 7,500+ applicants).
+        With a background in econometrics from VU Amsterdam and experience at Optiver and Tesla, he specializes in building AI-powered
+        SaaS applications and automation solutions. Jesse founded Giroscope, a portfolio analysis tool that scaled to 500+ users,
+        and builds automation workflows that help businesses streamline their CRM and operational processes.
       </>
     ),
   },
@@ -181,43 +182,9 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "n8n Workflow Automation",
+        title: "Full-Stack Development",
         description: (
-          <>Expert in building complex automation workflows with n8n, integrating multiple systems and APIs.</>
-        ),
-        tags: [
-          {
-            name: "n8n",
-            icon: "github",
-          },
-          {
-            name: "API Integration",
-            icon: "globe",
-          },
-        ],
-        images: [],
-      },
-      {
-        title: "CRM & ATS Integration",
-        description: (
-          <>Specialized in automating customer relationship management and applicant tracking systems.</>
-        ),
-        tags: [
-          {
-            name: "Automation",
-            icon: "github",
-          },
-          {
-            name: "Integration",
-            icon: "globe",
-          },
-        ],
-        images: [],
-      },
-      {
-        title: "SaaS Application Development",
-        description: (
-          <>Full-stack development of SaaS applications, including Ask For Sara - an AI-powered voice agent that automates HubSpot CRM administration through natural conversation. Expertise in building scalable, user-friendly applications from concept to deployment.</>
+          <>Building end-to-end SaaS applications from concept to deployment. Experience with React, TypeScript, FastAPI, PostgreSQL, and cloud platforms (GCP, Supabase). Created Giroscope, a portfolio analysis tool scaled to 500+ users.</>
         ),
         tags: [
           {
@@ -225,15 +192,65 @@ const about: About = {
             icon: "github",
           },
           {
-            name: "Node.js",
+            name: "TypeScript",
             icon: "github",
           },
           {
-            name: "AI/Voice",
+            name: "Python",
+            icon: "github",
+          },
+          {
+            name: "FastAPI",
             icon: "globe",
           },
           {
-            name: "Full-Stack",
+            name: "PostgreSQL",
+            icon: "globe",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "AI & Automation",
+        description: (
+          <>Developing AI-powered applications and automation solutions. Built MVPs using OpenAI Agent Platform, n8n workflows, and custom automation tools. Experience with voice agents, CRM automation, and business process optimization.</>
+        ),
+        tags: [
+          {
+            name: "OpenAI",
+            icon: "globe",
+          },
+          {
+            name: "n8n",
+            icon: "github",
+          },
+          {
+            name: "Supabase",
+            icon: "github",
+          },
+          {
+            name: "AI Agents",
+            icon: "globe",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Data & Analytics",
+        description: (
+          <>Strong foundation in econometrics, data analysis, and operations research from VU Amsterdam. Experience with data pipelines, reconciliation systems, and business intelligence from roles at Optiver and Tesla.</>
+        ),
+        tags: [
+          {
+            name: "Python",
+            icon: "github",
+          },
+          {
+            name: "Data Analysis",
+            icon: "globe",
+          },
+          {
+            name: "Econometrics",
             icon: "globe",
           },
         ],
