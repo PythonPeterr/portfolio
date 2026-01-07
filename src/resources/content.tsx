@@ -98,19 +98,19 @@ const about: About = {
       {
         company: "Meijer & Knijnenberg",
         timeframe: "2023 - Present",
-        role: "Automation Engineer & SaaS Developer",
+        role: "Web Developer & SaaS Developer",
         achievements: [
           <>
-            Built comprehensive n8n automation workflows for CRM, ATS, and business processes,
-            reducing manual work by 70%.
+            Developed a custom website featuring a job board and administrative upload portal,
+            enabling easy job listing management and candidate applications.
           </>,
           <>
             Designed and developed Ask For Sara, an AI-powered voice agent SaaS application that handles
             HubSpot CRM administration through natural language conversations, automating data entry and CRM management.
           </>,
           <>
-            Implemented AI-powered automation solutions that streamlined client communication and
-            data management across multiple platforms.
+            Created an intuitive interface for non-technical staff to manage job postings without
+            technical intervention, streamlining the recruitment workflow.
           </>,
         ],
         images: [],
